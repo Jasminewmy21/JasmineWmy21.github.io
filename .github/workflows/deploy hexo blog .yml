@@ -1,0 +1,31 @@
+name: Deploy Hexo Blog 
+
+on:
+  push:
+    branches: [ master ]
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.1.5
+      with:
+        node-version: 12.18.0
+        
+    - name: Deploy Blog
+      env:
+        DEPLOY_BLOG: ${{secrets.DEPLOY_BLOG}}
+      run: |
+        git config --global user.name "Jasminewmy21"
+        git config --global user.email "292516539@qq.com"
+        npm install
+        npm run build
+        npm run deploy
+        
+      
