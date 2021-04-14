@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  Github+hexo搭建 |    Jasmine Wang</title>
+  <title>  Git入门 |    Jasmine Wang</title>
   <meta name="description" content="A woman in Tech.">
   <!-- 标签页图标 -->
   
@@ -39,7 +39,7 @@
       <div class="menu-group">
         <ul class="menu-ul">
         
-          <a href="/archives" class="nav-link">
+          <a href="/" class="nav-link">
             <li class="menu-li  animate__animated  animate__fadeInUp">
               HOME
             </li>
@@ -54,12 +54,6 @@
           <a href="/archives" class="nav-link">
             <li class="menu-li  animate__animated  animate__fadeInUp">
               LIFE
-            </li>
-          </a>
-        
-          <a href="/archives" class="nav-link">
-            <li class="menu-li  animate__animated  animate__fadeInUp">
-              BLOG
             </li>
           </a>
         
@@ -102,7 +96,7 @@
 
   <div class="mobile-menu-div">
   
-    <a href="/archives" class="mobile-nav-link">
+    <a href="/" class="mobile-nav-link">
       <div class="mobile-menu-child animate__animated  animate__fadeInUp">
         <span>HOME</span>
       </div>
@@ -117,12 +111,6 @@
     <a href="/archives" class="mobile-nav-link">
       <div class="mobile-menu-child animate__animated  animate__fadeInUp">
         <span>LIFE</span>
-      </div>
-    </a>
-  
-    <a href="/archives" class="mobile-nav-link">
-      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
-        <span>BLOG</span>
       </div>
     </a>
   
@@ -150,7 +138,7 @@
 <article class="post-inner">
   <div class="post-content-outer">
     <div class="post-intro">
-      <div class="post-title animate__animated  animate__fadeInUp">github+hexo搭建</div>
+      <div class="post-title animate__animated  animate__fadeInUp">git入门</div>
       <div class="meta-intro animate__animated  animate__fadeInUp">Apr 14 2021</div>
       
     </div>
@@ -161,7 +149,18 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h2 id="github-hexo-搭建个人博客"><a href="#github-hexo-搭建个人博客" class="headerlink" title="github + hexo 搭建个人博客"></a>github + hexo 搭建个人博客</h2><h3 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是<a target="_blank" rel="noopener" href="https://hexo.io/docs/">hexo</a></h3><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ol>
+        <h1 id="1-git入门"><a href="#1-git入门" class="headerlink" title="1. git入门"></a>1. git入门</h1><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
+<li>下载git</li>
+<li>注册github</li>
+<li>将git和github连接起来<br> 1)获取ssh密钥 id_rsa.pub<br> 2)在github的setting里找到ssh key, 新建ssh key并填写密钥</li>
+</ol>
+<h3 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h3><ol>
+<li><p>确定git和github已经连接<br> 1)git init 初始化<br> 2)git remote add origin <a target="_blank" rel="noopener" href="https://github.com/Jasminewmy21(%E7%94%A8%E6%88%B7%E5%90%8D)/ProjectDSA(%E4%BB%93%E5%BA%93%E5%90%8D).git">https://github.com/Jasminewmy21(用户名)/ProjectDSA(仓库名).git</a><br> 3)git pull origin master</p>
+</li>
+<li><p>本地文件推到github上<br> 1)git add Demo01.java(要上传的文件)<br> 1)git add . (文件夹下的全部文件)<br> 2)git comment -m ‘注释内容’ (可没有)<br> 3)git push origin master (推上去)</p>
+</li>
+</ol>
+<h1 id="2-github-hexo-搭建个人博客"><a href="#2-github-hexo-搭建个人博客" class="headerlink" title="2. github + hexo 搭建个人博客"></a>2. github + hexo 搭建个人博客</h1><h2 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是<a target="_blank" rel="noopener" href="https://hexo.io/docs/">hexo</a></h2><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ol>
 <li>node.js</li>
 <li>git</li>
 <li>github</li>
@@ -177,13 +176,52 @@
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
 
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-hexo博客编写"><a href="#3-hexo博客编写" class="headerlink" title="3. hexo博客编写"></a>3. hexo博客编写</h1><h2 id="markdown语言"><a href="#markdown语言" class="headerlink" title="markdown语言"></a>markdown语言</h2><ol>
+<li><p>标题有六级标题, 前面加几个#表示几级标题,一定注意要有空格</p>
+<blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2></blockquote>
+</li>
+<li><p>加图片</p>
+<blockquote>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="%E5%9C%B0%E5%9D%80" >
+        </sapn>
+      <br>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/a4/51/14/a45114a1-08c4-9281-a300-e4a14d280fbb/source/3000x3000bb.jpg" >
+        </sapn>
+      </p>
+</blockquote>
+</li>
+<li><p>加超链接</p>
+<blockquote>
+<p><a href="%E5%9C%B0%E5%9D%80">文字等</a><br><a target="_blank" rel="noopener" href="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/ae/64/cf/ae64cfdd-7879-f1ba-5957-4ca30b581fa0/source/3000x3000bb.jpg">高清专辑封面</a></p>
+</blockquote>
+</li>
+<li><p>显示效果等</p>
+<blockquote>
+<p><strong>加粗</strong><br><em>斜体</em></p>
+<p align="left"><font face="楷体" color="blue" size="24">字体/颜色/字号</font></p>
+<center><font face="楷体" color="blue" size="24">字体/颜色/字号</font></center>
+<p align="right"><font face="楷体" color="blue" size="24">字体/颜色/字号</font></p></blockquote>
+</li>
+</ol>
+<h1 id="4-主题"><a href="#4-主题" class="headerlink" title="4. 主题"></a>4. 主题</h1><ol>
+<li>hexo官网-主题-找喜欢的主题</li>
+<li>根据喜欢的主题的安装说明进行安装<br> 1)clone或者download都可以<br> 2)_config.yml-改theme名称为所下载主题名<br> 3)一定记得保存</li>
+</ol>
+
         <!-- 分类文章 -->
         
       </div>
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#github-hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="space-toc-text">github + hexo 搭建个人博客</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="space-toc-text">安装hexo</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="space-toc-text">新建文件夹</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFhexo"><span class="space-toc-text">什么是hexo</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="space-toc-text">安装hexo</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="space-toc-text">新建文件夹</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#markdown%E8%AF%AD%E8%A8%80"><span class="space-toc-text">markdown语言</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="space-toc-text">二级标题</span></a></li></ol>
            </div>
         
       </div>
