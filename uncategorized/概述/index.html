@@ -276,7 +276,12 @@
 <td>chmod(); umask(); chown();</td>
 </tr>
 </tbody></table>
-<h3 id="系统调用背后过程"><a href="#系统调用背后过程" class="headerlink" title="系统调用背后过程"></a>系统调用背后过程</h3><p>传递系统调用参数→执行陷入指令(用户态)→执行系统调用相应服务程序(核心态)→返回用户程序<br>注意: 陷入指令在<strong>用户态</strong>执行, 执行之后立即引发一个<strong>内中断</strong>, 从而CPU进入<strong>内核态</strong></p>
+<h3 id="系统调用背后过程"><a href="#系统调用背后过程" class="headerlink" title="系统调用背后过程"></a>系统调用背后过程</h3><p>传递系统调用参数→执行陷入指令(用户态)→执行系统调用相应服务程序(核心态)→返回用户程序<br>注意: </p>
+<ol>
+<li>陷入指令在<strong>用户态</strong>执行, 执行之后立即引发一个<strong>内中断</strong>, 从而CPU进入<strong>内核态</strong></li>
+<li>发出系统调用请求是在<strong>用户态</strong>, 而对系统调用的相应处理在<strong>内核态</strong>进行</li>
+<li>陷入指令是唯一一个只能在用户态执行,<strong>不能在内核态执行</strong>的指令</li>
+</ol>
 
         <!-- 分类文章 -->
         
