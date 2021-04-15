@@ -209,15 +209,15 @@
 <li>结构性<br>每个进程都会配置一个PCB. 进程由进程段, 数据段, PCB组成</li>
 </ol>
 <h2 id="进程的状态和切换"><a href="#进程的状态和切换" class="headerlink" title="进程的状态和切换"></a>进程的状态和切换</h2><h3 id="1-进程的状态"><a href="#1-进程的状态" class="headerlink" title="1. 进程的状态"></a>1. 进程的状态</h3><ol>
-<li><p>运行态(Running)<br>占有CPU, 并在CPU上运行<br>注意: </p>
-</li>
-<li><p>单核处理器, 每个时刻最多只有一个进程处于运行态</p>
-</li>
-<li><p>多核处理器, 每个时刻可以同时有两个进程处于运行态</p>
+<li><p>运行态(Running)<br>占有CPU, 并在CPU上运行<br>注意: 单核处理器, 每个时刻最多只有一个进程处于运行态; 多核处理器, 每个时刻可以同时有两个进程处于运行态</p>
 </li>
 <li><p>就绪态(Ready)<br>已经具备运行条件, 但是没有空虚CPU, 暂时不能运行<br>拥有了除CPU之外所需要的资源, 一旦获得处理机,即可立即进入Running(万事俱备, 只欠CPU)</p>
 </li>
 <li><p>阻塞态(Waiting/Blocked)<br>因等待某一事件暂时不能Running<br>等待操作系统分配打印机、等待读磁盘操作的结果等. </p>
+</li>
+<li><p>创建态(New)<br>进程正在被创建, OS为进程分配资源, 初始化PCB</p>
+</li>
+<li><p>终止态(Terminated)<br>进程正在从系统中撤销, OS会回收进程拥有的资源, 撤销PCB</p>
 </li>
 </ol>
 <table>
@@ -230,26 +230,20 @@
 </thead>
 <tbody><tr>
 <td align="center">Running</td>
-<td><center>√ </center></td>
-<td>√</td>
+<td><center>√</center></td>
+<td><center>√</center></td>
 </tr>
 <tr>
 <td align="center">Ready</td>
-<td>×</td>
-<td>√</td>
+<td><center>×</center></td>
+<td><center>√</center></td>
 </tr>
 <tr>
 <td align="center">Blocked</td>
-<td>√</td>
-<td>×</td>
+<td>center&gt;×</center></td>
+<td>center&gt;×</center></td>
 </tr>
 </tbody></table>
-<ol start="4">
-<li><p>创建态(New)<br>进程正在被创建, OS为进程分配资源, 初始化PCB</p>
-</li>
-<li><p>终止态(Terminated)<br>进程正在从系统中撤销, OS会回收进程拥有的资源, 撤销PCB</p>
-</li>
-</ol>
 <h3 id="2-进程状态的转换"><a href="#2-进程状态的转换" class="headerlink" title="2. 进程状态的转换"></a>2. 进程状态的转换</h3><p>
         <span class="lazyload-img-span">
         <img   
