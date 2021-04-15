@@ -208,6 +208,62 @@
 <li>异步性<br>各个进程按各自独立的、不可预知的速度向前推进, OS要提供<strong>进程同步机制</strong>来解决异步问题</li>
 <li>结构性<br>每个进程都会配置一个PCB. 进程由进程段, 数据段, PCB组成</li>
 </ol>
+<h2 id="进程的状态和切换"><a href="#进程的状态和切换" class="headerlink" title="进程的状态和切换"></a>进程的状态和切换</h2><h3 id="1-进程的状态"><a href="#1-进程的状态" class="headerlink" title="1. 进程的状态"></a>1. 进程的状态</h3><ol>
+<li><p>运行态(Running)<br>占有CPU, 并在CPU上运行<br>注意: </p>
+</li>
+<li><p>单核处理器, 每个时刻最多只有一个进程处于运行态</p>
+</li>
+<li><p>多核处理器, 每个时刻可以同时有两个进程处于运行态</p>
+</li>
+<li><p>就绪态(Ready)<br>已经具备运行条件, 但是没有空虚CPU, 暂时不能运行<br>拥有了除CPU之外所需要的资源, 一旦获得处理机,即可立即进入Running(万事俱备, 只欠CPU)</p>
+</li>
+<li><p>阻塞态(Waiting/Blocked)<br>因等待某一事件暂时不能Running<br>等待操作系统分配打印机、等待读磁盘操作的结果等. </p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">状态</th>
+<th>CPU</th>
+<th>其他所需资源</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Running</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">Ready</td>
+<td>×</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">Blocked</td>
+<td>√</td>
+<td>×</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li><p>创建态(New)<br>进程正在被创建, OS为进程分配资源, 初始化PCB</p>
+</li>
+<li><p>终止态(Terminated)<br>进程正在从系统中撤销, OS会回收进程拥有的资源, 撤销PCB</p>
+</li>
+</ol>
+<h3 id="2-进程状态的转换"><a href="#2-进程状态的转换" class="headerlink" title="2. 进程状态的转换"></a>2. 进程状态的转换</h3><p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://camo.githubusercontent.com/0398c2bace5b1b0695f5a34f6cfedf6e358db565408abc83dd161de71d3bfec8/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f50726f6365737353746174652e706e67" >
+        </sapn>
+      </p>
+<ol>
+<li>Ready to Running: 进程被调度</li>
+<li>Running to Ready: 时间片到, 或CPU被其他高优先级进程抢占</li>
+<li>Running to Blocked: 等待系统资源分配, 或等待某事件发生(<strong>主动行为</strong>)</li>
+<li>Blocked to Ready: 资源分配到位, 等待的事件发生(<strong>被动行为</strong>)</li>
+<li>New to Ready: 系统完成创建进程的相关工作</li>
+<li>进程运行结束, 或运行过程中遇到不可修复的错误</li>
+</ol>
 
         <!-- 分类文章 -->
         
@@ -215,7 +271,7 @@
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E8%BF%9B%E7%A8%8B"><span class="space-toc-text">进程</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E8%BF%9B%E7%A8%8B"><span class="space-toc-text">进程</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E5%92%8C%E5%88%87%E6%8D%A2"><span class="space-toc-text">进程的状态和切换</span></a></li></ol>
            </div>
         
       </div>
