@@ -189,7 +189,25 @@
 </ul>
 </li>
 </ul>
-<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><p>程序: 就是一个指令序列</p>
+<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><p>程序: 就是一个指令序列</p>
+<h3 id="1-进程定义"><a href="#1-进程定义" class="headerlink" title="1. 进程定义"></a>1. 进程定义</h3><p>· 进程是具有独立功功能的程序在数据集合上<strong>运行的过程</strong>, 它是系统进行<strong>资源分配</strong>和<strong>调度</strong>的一个独立单元</p>
+<h3 id="2-组成"><a href="#2-组成" class="headerlink" title="2. 组成"></a>2. 组成</h3><p>引入多道程序技术后,为了方便OS管理, 完成各程序并发执行, 引入了<strong>进程、进程实体</strong>的概念<br>进程实体(进程映射,简称进程): 程序段、数据段、PCB<br>所谓创建进程, 实质就是创建进程实体中的PCB; 撤销进程就是撤销实体中的PCB<br>注意: </p>
+<ol>
+<li>PCB是进程存在的唯一标志</li>
+<li>进程实体是静态的, 进程是动态的</li>
+</ol>
+<p>· PCB: 包括进程描述信息PID、UID, 进程控制和管理信息, 资源分配清单, 处理机相关信息</p>
+<h3 id="3-进程的组织方式"><a href="#3-进程的组织方式" class="headerlink" title="3. 进程的组织方式"></a>3. 进程的组织方式</h3><ol>
+<li>链接方式<br>按照进程状态将PCB分为多个队列<br>OS持有指向各个队列的指针</li>
+<li>索引方式<br>按照进程状态不同, 建立几张索引表<br>OS持有指向各个索引表的指针</li>
+</ol>
+<h3 id="4-进程的特征"><a href="#4-进程的特征" class="headerlink" title="4. 进程的特征"></a>4. 进程的特征</h3><ol>
+<li>动态性(最基本特征)<br>进程是程序的一次执行过程, 是动态地产生、变化、消亡的</li>
+<li>并发性<br>内存中有多个进程实体, 各进程可并发执行</li>
+<li>独立性<br>进程是能独立运行、独立获得资源、独立接受调度的基本单位</li>
+<li>异步性<br>各个进程按各自独立的、不可预知的速度向前推进, OS要提供<strong>进程同步机制</strong>来解决异步问题</li>
+<li>结构性<br>每个进程都会配置一个PCB. 进程由进程段, 数据段, PCB组成</li>
+</ol>
 
         <!-- 分类文章 -->
         
@@ -197,7 +215,7 @@
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="space-toc-text">进程与线程</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E8%BF%9B%E7%A8%8B"><span class="space-toc-text">进程</span></a></li></ol>
            </div>
         
       </div>
