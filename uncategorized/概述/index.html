@@ -236,6 +236,12 @@
 <h3 id="2-外中断"><a href="#2-外中断" class="headerlink" title="2. 外中断"></a>2. 外中断</h3><p>由 CPU 执行指令以外的事件引起，如 I/O 完成中断，表示设备输入/输出处理已经完成，处理器能够发送下一个输入/输出请求。此外还有时钟中断、控制台中断等。</p>
 <h2 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h2><p>用户接口:<br>· 命令接口(允许用户直接使用): 联机命令接口, 脱机命令接口<br>· 程序接口(允许用户通过程序间接使用): 由一组<strong>系统调用</strong>组成</p>
 <p>应用程序通过<strong>系统调用</strong>请求操作系统的服务. 系统中的各种共享资源都由操作系统统一掌管, 因此在用户程序中, 凡是与<strong>资源</strong>有关的操作(存储分配, IO操作, 文件管理等), 都必须通过系统调用的方式向OS提出服务请求, 由OS代为完成. 保证系统的稳定性和安全性, 防止用户进行非法操作.</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://camo.githubusercontent.com/e6e9338fcb2f8c849b5ed9798862d27937d80c94721948dd87c5dec1e739c2c6/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f74475056302e706e67" >
+        </sapn>
+      </p>
 <h3 id="1-按功能分类"><a href="#1-按功能分类" class="headerlink" title="1. 按功能分类"></a>1. 按功能分类</h3><ol>
 <li>设备管理</li>
 <li>文件管理</li>
@@ -276,7 +282,7 @@
 <td>chmod(); umask(); chown();</td>
 </tr>
 </tbody></table>
-<h3 id="系统调用背后过程"><a href="#系统调用背后过程" class="headerlink" title="系统调用背后过程"></a>系统调用背后过程</h3><p>传递系统调用参数→执行陷入指令(用户态)→执行系统调用相应服务程序(核心态)→返回用户程序<br>注意: </p>
+<h3 id="2-系统调用背后过程"><a href="#2-系统调用背后过程" class="headerlink" title="2. 系统调用背后过程"></a>2. 系统调用背后过程</h3><p>传递系统调用参数→执行陷入指令(用户态)→执行系统调用相应服务程序(核心态)→返回用户程序<br>注意: </p>
 <ol>
 <li>陷入指令在<strong>用户态</strong>执行, 执行之后立即引发一个<strong>内中断</strong>, 从而CPU进入<strong>内核态</strong></li>
 <li>发出系统调用请求是在<strong>用户态</strong>, 而对系统调用的相应处理在<strong>内核态</strong>进行</li>
