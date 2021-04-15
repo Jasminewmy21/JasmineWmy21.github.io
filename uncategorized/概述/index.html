@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  Hello Blog! |    Jasmine Wang</title>
+  <title>  操作系统概述 |    Jasmine Wang</title>
   <meta name="description" content="A woman in Tech.">
   <!-- 标签页图标 -->
   
@@ -138,8 +138,8 @@
 <article class="post-inner">
   <div class="post-content-outer">
     <div class="post-intro">
-      <div class="post-title animate__animated  animate__fadeInUp">Hello Blog!</div>
-      <div class="meta-intro animate__animated  animate__fadeInUp">Apr 13 2021</div>
+      <div class="post-title animate__animated  animate__fadeInUp">操作系统概述</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">4月 14 2021</div>
       
     </div>
     <div class="post-content-inner">
@@ -149,23 +149,52 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <p>Welcome to my blog! This is your very first post. </p>
-<p>There are some information to know Hexo.<br>Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If I get any problems when using Hexo, I can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or I can ask the author on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="There-are-some-tips-to-use-Hexo"><a href="#There-are-some-tips-to-use-Hexo" class="headerlink" title="There are some tips to use Hexo."></a>There are some tips to use Hexo.</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d </span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="计算机操作系统-概述"><a href="#计算机操作系统-概述" class="headerlink" title="计算机操作系统 - 概述"></a>计算机操作系统 - 概述</h1><!-- GFM-TOC -->
+<ul>
+<li><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F---%E6%A6%82%E8%BF%B0">计算机操作系统 - 概述</a><ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81">基本特征</a><ul>
+<li><a href="#1-%E5%B9%B6%E5%8F%91">1. 并发</a></li>
+<li><a href="#2-%E5%85%B1%E4%BA%AB">2. 共享</a></li>
+<li><a href="#3-%E8%99%9A%E6%8B%9F">3. 虚拟</a></li>
+<li><a href="#4-%E5%BC%82%E6%AD%A5">4. 异步</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD">基本功能</a><ul>
+<li><a href="#1-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86">1. 进程管理</a></li>
+<li><a href="#2-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">2. 内存管理</a></li>
+<li><a href="#3-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86">3. 文件管理</a></li>
+<li><a href="#4-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86">4. 设备管理</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8">系统调用</a></li>
+<li><a href="#%E5%AE%8F%E5%86%85%E6%A0%B8%E5%92%8C%E5%BE%AE%E5%86%85%E6%A0%B8">宏内核和微内核</a><ul>
+<li><a href="#1-%E5%AE%8F%E5%86%85%E6%A0%B8">1. 宏内核</a></li>
+<li><a href="#2-%E5%BE%AE%E5%86%85%E6%A0%B8">2. 微内核</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%AD%E6%96%AD%E5%88%86%E7%B1%BB">中断分类</a><ul>
+<li><a href="#1-%E5%A4%96%E4%B8%AD%E6%96%AD">1. 外中断</a></li>
+<li><a href="#2-%E5%BC%82%E5%B8%B8">2. 异常</a></li>
+<li><a href="#3-%E9%99%B7%E5%85%A5">3. 陷入</a><!-- GFM-TOC --></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="基本特征"><a href="#基本特征" class="headerlink" title="基本特征"></a>基本特征</h2><h3 id="1-并发-最基本的特征"><a href="#1-并发-最基本的特征" class="headerlink" title="1. 并发(最基本的特征)"></a>1. 并发(最基本的特征)</h3><p>并发是指宏观上在一段时间内能同时运行多个程序，而并行则指同一时刻能运行多个指令。</p>
+<p>并行需要硬件支持，如多流水线、多核处理器或者分布式计算系统。</p>
+<p>操作系统通过引入进程和线程，使得程序能够并发运行。</p>
+<h3 id="2-共享-最基本的特征"><a href="#2-共享-最基本的特征" class="headerlink" title="2. 共享(最基本的特征)"></a>2. 共享(最基本的特征)</h3><p>共享是指系统中的资源可以被多个并发进程共同使用。</p>
+<p>有两种共享方式：互斥共享和同时共享。</p>
+<p>互斥共享方式: 对摄像头设备的共享使用<br>同时共享方式: 对硬盘资源的共享使用</p>
+<p>互斥共享的资源称为临界资源，例如打印机等，在同一时刻只允许一个进程访问，需要用同步机制来实现互斥访问。</p>
+<h3 id="3-虚拟"><a href="#3-虚拟" class="headerlink" title="3. 虚拟"></a>3. 虚拟</h3><p>虚拟技术把一个物理实体转换为多个逻辑实体。</p>
+<p>主要有两种虚拟技术：时（时间）分复用技术和空（空间）分复用技术。</p>
+<p>时分复用技术: 虚拟处理器技术<br>空分复用技术: 虚拟存储技术</p>
+<p>多个进程能在同一个处理器上并发执行使用了时分复用技术，让每个进程轮流占用处理器，每次只执行一小个时间片并快速切换。</p>
+<p>虚拟内存使用了空分复用技术，它将物理内存抽象为地址空间，每个进程都有各自的地址空间。地址空间的页被映射到物理内存，地址空间的页并不需要全部在物理内存中，当使用到一个没有在物理内存的页时，执行页面置换算法，将该页置换到内存中。</p>
+<h3 id="4-异步"><a href="#4-异步" class="headerlink" title="4. 异步"></a>4. 异步</h3><p>异步指进程不是一次性执行完毕，而是走走停停，以不可知的速度向前推进。</p>
+<p>只有系统拥有并发性, 才有可能导致异步性</p>
 
         <!-- 分类文章 -->
         
@@ -173,7 +202,7 @@
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#There-are-some-tips-to-use-Hexo"><span class="space-toc-text">There are some tips to use Hexo.</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81"><span class="space-toc-text">基本特征</span></a></li></ol>
            </div>
         
       </div>
