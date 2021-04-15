@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  Blog |    Jasmine Wang</title>
+  <title>  Operating System |    Jasmine Wang</title>
   <meta name="description" content="A woman in Tech.">
   <!-- 标签页图标 -->
   
@@ -135,124 +135,36 @@
 <div class="body-outer">
   <div class="body-inner">
     
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">Operating System</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">Apr 14 2021</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
 
-    <section class="archive-outer">
-    <section class="archive-inner">
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
         
+        <h3 id="Learn-OS-concepts-by-coding-them"><a href="#Learn-OS-concepts-by-coding-them" class="headerlink" title="Learn OS concepts by coding them"></a>Learn OS concepts by coding them</h3><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h1><h1 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h1><h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h1 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h1><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1>
+        <!-- 分类文章 -->
         
+      </div>
+      <div class="post-content-inner-space">
         
-        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
             
-            
-        <div class="archive-name animate__animated  animate__fadeInUp">2021</div>
+           </div>
         
-          <a  href="/undefined/Network.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">Network</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/%E6%A6%82%E8%BF%B0.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">操作系统概述</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/OperatingSystem.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">Operating System</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/GitHub+Hexo.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">git入门</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93%E5%B1%82.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">计算机网络传输层</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%B1%82.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">计算机网络应用层</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">计算机网络概述</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%89%A9%E7%90%86%E5%B1%82.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">计算机网络-物理层</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%BD%91%E7%BB%9C%E5%B1%82.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">计算机网络网络层</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/undefined/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%93%BE%E8%B7%AF%E5%B1%82.md">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">计算机网络-链路层</div>
-            <div class="archive-post-date">04-14</div>
-            <!-- Apr 14 -->
-          </div>
-          </a>
-        
-        
-          <nav class="paginator animate__animated  animate__fadeInUp">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">next</a>
-          </nav>
-        
-    </section>
-</section>
-
-
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+  </div>
+</article>
   </div>
 </div>
 
