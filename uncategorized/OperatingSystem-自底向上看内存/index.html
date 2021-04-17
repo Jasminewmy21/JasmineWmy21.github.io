@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>   Jasmine Wang</title>
+  <title>  从下到上看内存 |    Jasmine Wang</title>
   <meta name="description" content="A woman in Tech.">
   <!-- 标签页图标 -->
   
@@ -135,82 +135,48 @@
 <div class="body-outer">
   <div class="body-inner">
     
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">从下到上看内存</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">4月 17 2021</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
 
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h1 id="自底向上看内存"><a href="#自底向上看内存" class="headerlink" title="自底向上看内存"></a>自底向上看内存</h1><h2 id="计算机组成中内存条、总线、DMA的各自作用"><a href="#计算机组成中内存条、总线、DMA的各自作用" class="headerlink" title="计算机组成中内存条、总线、DMA的各自作用"></a>计算机组成中内存条、总线、DMA的各自作用</h2><p>· DMAC 直接内存访问控制器, 所以它是可以直接访问内存的</p>
+<p>· CPU和内存之间有数据总线和地址总线相连的,所以CPU可以直接访问内存上的数据</p>
+<p>· CPU让DMA干活的时候, 也会把总线的控制权完全给DMAC, 所以当前这个阶段DMA对总线有着绝对的控制权, 所以当前阶段CPU跟总线是隔绝的状态, 这个时候DMA就可以很轻易地对数据访问和读写了.</p>
+<p>· DMA在对数据进行访问读取的时候不是说一直掌握总线的控制器, 而轮换的掌握总线的控制权, 这一秒可能是DMA控制, 下一秒可能换成DMA, 只是在用户看起来是同时而已,微观上并不是. 所以说DMAC和CPU是不能同时使用总线的. 在DMA方式下, CPU与总线的关系是成隔离状态的</p>
+<h2 id="内存管理和内存分配"><a href="#内存管理和内存分配" class="headerlink" title="内存管理和内存分配"></a>内存管理和内存分配</h2><p>在linux中输入指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ free -h</span><br></pre></td></tr></table></figure>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/images/myImage.png" >
+        </sapn>
+      <br>· Mem就是内存<br>· Swap就是磁盘交换分区, swap就是映射到磁盘的分区,在linux专门拿一个分区来做这个映射<br>在windows下是在c盘下专门的一个文件来<br>· 使用了的包括共享内存<br>·空闲现在200M, 如果要用1G的内存, 可以把缓存清理一部分, 所以还是能用的, 所以能用多少一般看的是available</p>
+<h3 id="页-Page"><a href="#页-Page" class="headerlink" title="页 Page"></a>页 Page</h3><h3 id="页帧-Page-Frame"><a href="#页帧-Page-Frame" class="headerlink" title="页帧 Page Frame"></a>页帧 Page Frame</h3><h3 id="页表-Page-Table"><a href="#页表-Page-Table" class="headerlink" title="页表 Page Table"></a>页表 Page Table</h3><h3 id="快表-Translation-Lookaside-Buffer-TLB"><a href="#快表-Translation-Lookaside-Buffer-TLB" class="headerlink" title="快表 Translation Lookaside Buffer, TLB"></a>快表 Translation Lookaside Buffer, TLB</h3>
+        <!-- 分类文章 -->
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%AD%E5%86%85%E5%AD%98%E6%9D%A1%E3%80%81%E6%80%BB%E7%BA%BF%E3%80%81DMA%E7%9A%84%E5%90%84%E8%87%AA%E4%BD%9C%E7%94%A8"><span class="space-toc-text">计算机组成中内存条、总线、DMA的各自作用</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%92%8C%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="space-toc-text">内存管理和内存分配</span></a></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
     
-<section class="img-show-outer">
-    <section class="img-show-inner">
-          
-          
-          <div class="img-show-post">
-            <div class="img-show-post-cover">
-              <span class="lazyload-img-span">
-              <a  href="/uncategorized/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E9%93%BE%E8%B7%AF%E5%B1%82/">
-              
-                
-                <img data-src="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/77/c9/58/77c95851-f8f1-ccd8-a75b-5f4ee3edecc1/source/3000x3000bb.jpg" class="img-show-post-cover-class">
-              
-              </a>
-              </span>
-            </div>
-            <div class="img-show-post-intro">
-             <a  href="/uncategorized/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E9%93%BE%E8%B7%AF%E5%B1%82/">
-            <div class="img-show-post-title animate__animated  animate__fadeInUp">计算机网络-链路层</div>
-            </a>
-            <div class="img-show-post-date animate__animated  animate__fadeInUp">4月 14 2021 </div>
-            </div>
-          </div>
-          
-         
-          <div class="img-show-post">
-            <div class="img-show-post-cover">
-              <span class="lazyload-img-span">
-              <a  href="/uncategorized/OperatingSystem-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%BC%A0%E8%BE%93%E5%B1%82/">
-              
-                
-                <img data-src="https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/79/a3/79/79a379fa-2401-bba8-d057-619c6783c705/source/3000x3000bb.jpg" class="img-show-post-cover-class">
-              
-              </a>
-              </span>
-            </div>
-            <div class="img-show-post-intro">
-             <a  href="/uncategorized/OperatingSystem-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E4%BC%A0%E8%BE%93%E5%B1%82/">
-            <div class="img-show-post-title animate__animated  animate__fadeInUp">计算机网络传输层</div>
-            </a>
-            <div class="img-show-post-date animate__animated  animate__fadeInUp">4月 14 2021 </div>
-            </div>
-          </div>
-          
-         
-          <div class="img-show-post">
-            <div class="img-show-post-cover">
-              <span class="lazyload-img-span">
-              <a  href="/uncategorized/helloBlog/">
-              
-                
-                <img data-src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/bb/67/4d/bb674d4d-ae26-befe-839a-22698b05e1b1/source/3000x3000bb.jpg" class="img-show-post-cover-class">
-              
-              </a>
-              </span>
-            </div>
-            <div class="img-show-post-intro">
-             <a  href="/uncategorized/helloBlog/">
-            <div class="img-show-post-title animate__animated  animate__fadeInUp">Hello Blog!</div>
-            </a>
-            <div class="img-show-post-date animate__animated  animate__fadeInUp">4月 13 2021 </div>
-            </div>
-          </div>
-          
-         
-    </section>
-    
-      <nav class="paginator animate__animated  animate__fadeInUp">
-        <a class="extend prev" rel="prev" href="/">prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-      </nav>
-    
-</section>
-
-
-
+  </div>
+</article>
   </div>
 </div>
 
